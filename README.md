@@ -2,11 +2,11 @@
 
 האתר של תלתיקס (tlatix.co.il), מתארח ב-GitHub Pages.
 
-- `index.html` – העמוד הראשי
-- `thanks.html` – עמוד תודה אחרי שליחת הטופס
+- `index.html` – דף הבית
+- `accessibility.html` – הצהרת נגישות
+- `privacy.html` – מדיניות פרטיות
+- `styles.css` – עיצוב משותף
+- `img/` – תמונות
 - `CNAME` – הדומיין של האתר
-- טופס יצירת הקשר נשלח ל-info@tlatix.co.il דרך FormSubmit
 
-## החלפת תמונות
-מעלים תמונה לתיקייה `images/` ומחליפים את ה-`<span class="ph">` בתוך ה-`div.photo` המתאים ב:
-`<img src="images/שם-הקובץ.jpg" alt="תיאור התמונה">`
+טופס יצירת הקשר נשלח ל-info@tlatix.co.il דרך FormSubmit (AJAX). בשליחה הראשונה FormSubmit שולח מייל אימות ל-info@ – צריך ללחוץ על הקישור שבו פעם אחת.

@@ -3,415 +3,245 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>תלתיקס | הדפסת תלת-ממד וייעוץ למדפסות</title>
-<meta name="description" content="תלתיקס – הדפסת תלת-ממד לפי עיצוב, ייעוץ לעסקים בבחירת מדפסת תלת-ממד, וצוות מעצבים שמבינים בתחום.">
+<title>תלתיקס – מתמחים בהדפסת תלת-ממד</title>
+<meta name="description" content="תלתיקס: ייעוץ לעסקים, עיצוב והדפסה בתלת-ממד, מהסקיצה ועד המוצר המוגמר.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="תלתיקס | הדפסת תלת-ממד">
-<meta property="og:description" content="מהרעיון ועד החלק ביד: הדפסה לפי עיצוב, ייעוץ לבחירת מדפסת ומעצבים שמבינים בתחום.">
-<meta property="og:locale" content="he_IL">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#161310;
-    --ink-2:#3a332c;
-    --muted:#6f655b;
-    --paper:#f6f2ec;
-    --white:#ffffff;
-    --line:#e3dbd0;
-    --brown:#7a5230;
-    --brown-dark:#5a3b21;
-    --sand:#c9a27e;
-    --radius:18px;
-    --wrap:1180px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:"Heebo",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
-  img{max-width:100%;display:block}
-  a{color:inherit}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-  .skip{position:absolute;inset-inline-start:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;z-index:99}
-  .skip:focus{inset-inline-start:8px}
-  :focus-visible{outline:3px solid var(--sand);outline-offset:3px;border-radius:6px}
-
-  /* ---------- header ---------- */
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
-  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:24px;letter-spacing:-.5px}
-  .logo svg{width:30px;height:30px}
-  .logo small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:2px;margin-top:-4px}
-  .menu{display:flex;gap:28px;list-style:none}
-  .menu a{text-decoration:none;font-size:15px;font-weight:500;color:var(--ink-2)}
-  .menu a:hover{color:var(--brown)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:700;font-size:15px;text-decoration:none;border:0;cursor:pointer;border-radius:999px;padding:13px 24px;transition:transform .15s ease,background .2s ease}
-  .btn:hover{transform:translateY(-1px)}
-  .btn-dark{background:var(--ink);color:#fff}
-  .btn-dark:hover{background:var(--brown-dark)}
-  .btn-brown{background:var(--brown);color:#fff}
-  .btn-brown:hover{background:var(--brown-dark)}
-  .btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
-  .btn-line:hover{background:var(--ink);color:#fff}
-  .btn svg{width:18px;height:18px}
-  .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
-  .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px auto;transition:.2s}
-
-  /* ---------- photo placeholders (replace with real photos) ---------- */
-  .photo{position:relative;border-radius:var(--radius);overflow:hidden;background:
-      repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 7px),
-      linear-gradient(160deg,#8a6040 0%,#5a3b21 55%,#2b1e14 100%);min-height:220px}
-  .photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-  .photo .ph{position:absolute;inset-inline-start:18px;bottom:16px;color:rgba(255,255,255,.85);font-size:13px;font-weight:500;display:flex;align-items:center;gap:8px}
-  .photo .ph::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sand)}
-  .photo.light{background:
-      repeating-linear-gradient(0deg,rgba(0,0,0,.04) 0 1px,transparent 1px 7px),
-      linear-gradient(160deg,#efe7dc 0%,#d9c7b1 100%)}
-  .photo.light .ph{color:var(--brown-dark)}
-  .photo.dark{background:
-      repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 7px),
-      linear-gradient(160deg,#2a2622 0%,#121010 100%)}
-
-  /* ---------- hero ---------- */
-  .hero{padding:72px 0 88px;background:var(--paper)}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--brown);text-transform:uppercase}
-  .eyebrow::before{content:"";width:28px;height:2px;background:var(--brown)}
-  h1,h2{font-family:"Frank Ruhl Libre",serif;font-weight:900;letter-spacing:-.5px;line-height:1.08}
-  h1{font-size:clamp(40px,6vw,72px);margin:18px 0 22px}
-  h1 em{font-style:normal;color:var(--brown)}
-  .lead{font-size:19px;color:var(--ink-2);max-width:540px;font-weight:300}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-  .hero .photo{aspect-ratio:4/5;min-height:0}
-  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line);max-width:560px}
-  .facts b{display:block;font-size:15px;font-weight:700}
-  .facts span{font-size:14px;color:var(--muted);line-height:1.45;display:block}
-
-  /* ---------- sections ---------- */
-  section{padding:104px 0}
-  .head{max-width:680px;margin-bottom:56px}
-  h2{font-size:clamp(32px,4.4vw,52px);margin:14px 0 16px}
-  .head p{color:var(--muted);font-size:18px}
-
-  .services{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  .svc{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;background:#fff}
-  .svc .photo{border-radius:0;aspect-ratio:16/9;min-height:0}
-  .svc-body{padding:34px 34px 38px;display:flex;flex-direction:column;gap:14px;flex:1}
-  .svc h3{font-size:26px;font-weight:800;letter-spacing:-.3px}
-  .svc p{color:var(--ink-2)}
-  .ticks{list-style:none;display:grid;gap:10px;margin:6px 0 10px}
-  .ticks li{display:flex;gap:12px;align-items:flex-start;font-size:16px}
-  .ticks li::before{content:"";flex:0 0 18px;height:18px;margin-top:4px;border-radius:50%;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%237a5230' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat;box-shadow:inset 0 0 0 1px var(--sand)}
-  .svc .btn{align-self:flex-start;margin-top:auto}
-
-  /* process */
-  .process{background:var(--ink);color:#fff}
-  .process .eyebrow{color:var(--sand)}
-  .process .eyebrow::before{background:var(--sand)}
-  .process .head p{color:#bdb3a8}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:1px solid #3a332c}
-  .step{padding:34px 0 0 28px;counter-increment:s;position:relative}
-  .step::before{content:"0" counter(s);font-family:"Frank Ruhl Libre",serif;font-size:56px;font-weight:700;color:var(--sand);line-height:1;display:block;margin-bottom:18px}
-  .step h3{font-size:20px;font-weight:700;margin-bottom:8px}
-  .step p{color:#bdb3a8;font-size:16px}
-
-  /* team */
-  .team-intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:56px}
-  .team-intro .head{margin-bottom:0}
-  .team-intro blockquote{font-family:"Frank Ruhl Libre",serif;font-size:24px;line-height:1.45;color:var(--brown-dark);border-inline-start:3px solid var(--sand);padding-inline-start:22px}
-  .team{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-  .member .photo{aspect-ratio:3/4;min-height:0;border-radius:14px}
-  .member h3{font-size:18px;font-weight:700;margin-top:14px}
-  .member p{font-size:14px;color:var(--muted);line-height:1.5;margin-top:4px}
-
-  /* gallery */
-  .gallery-sec{background:var(--paper)}
-  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
-  .gallery .photo{min-height:0}
-  .gallery .g1{grid-column:span 2;grid-row:span 2}
-  .gallery .g4{grid-column:span 2}
-
-  /* contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
-  .channels{display:grid;gap:14px;margin-top:30px}
-  .channel{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:14px;text-decoration:none;transition:border-color .2s,background .2s}
-  .channel:hover{border-color:var(--brown);background:var(--paper)}
-  .channel .ic{flex:0 0 44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff}
-  .channel .ic svg{width:20px;height:20px}
-  .channel b{display:block;font-size:16px}
-  .channel span{font-size:14px;color:var(--muted);direction:ltr;unicode-bidi:plaintext}
-  form{background:var(--paper);border-radius:var(--radius);padding:38px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .field{display:grid;gap:7px}
-  .field.full{grid-column:1/-1}
-  label{font-size:14px;font-weight:700}
-  input,select,textarea{font:inherit;font-size:16px;padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%}
-  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brown);box-shadow:0 0 0 3px rgba(122,82,48,.15)}
-  textarea{min-height:130px;resize:vertical}
-  .form-note{grid-column:1/-1;font-size:13px;color:var(--muted)}
-  form .btn{grid-column:1/-1;justify-self:start;padding:15px 34px}
-  .hp{position:absolute;inset-inline-start:-5000px}
-
-  /* footer */
-  footer{background:var(--ink);color:#bdb3a8;padding:56px 0 34px;font-size:15px}
-  .foot{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start}
-  footer .logo{color:#fff}
-  footer .logo small{color:#8f857a}
-  footer nav{display:flex;gap:22px;flex-wrap:wrap}
-  footer a{text-decoration:none}
-  footer a:hover{color:#fff}
-  .copy{margin-top:40px;padding-top:22px;border-top:1px solid #2e2924;font-size:13px;color:#8f857a}
-
-
-  /* ---------- responsive ---------- */
-  @media (max-width:1000px){
-    .team{grid-template-columns:repeat(3,1fr)}
-    .steps{grid-template-columns:1fr 1fr}
-  }
-  @media (max-width:860px){
-    body{font-size:16px}
-    .menu,.nav .btn{display:none}
-    .burger{display:block}
-    .menu.open{display:flex;flex-direction:column;position:absolute;top:72px;inset-inline:0;background:#fff;padding:12px 24px 24px;gap:4px;border-bottom:1px solid var(--line)}
-    .menu.open a{display:block;padding:12px 0;font-size:17px}
-    .hero{padding:44px 0 64px}
-    .hero-grid,.services,.team-intro,.contact-grid{grid-template-columns:1fr;gap:36px}
-    .hero .photo{aspect-ratio:4/3;order:-1}
-    section{padding:72px 0}
-    .head{margin-bottom:36px}
-    .svc-body{padding:26px}
-    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
-    .team{grid-template-columns:1fr 1fr}
-    form{grid-template-columns:1fr;padding:24px}
-    .facts{grid-template-columns:1fr;gap:14px}
-  }
-  @media (max-width:520px){
-    .wrap{padding:0 16px}
-    .steps{grid-template-columns:1fr}
-    .step{padding:26px 0 0}
-    form .btn{justify-self:stretch}
-  }
-  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#main">דילוג לתוכן</a>
+<a class="skip-link" href="#main">דלג לתוכן הראשי</a>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="תלתיקס – לראש העמוד">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="22" width="24" height="5" rx="1.5" fill="#161310"/><rect x="7" y="14.5" width="18" height="5" rx="1.5" fill="#7a5230"/><rect x="10" y="7" width="12" height="5" rx="1.5" fill="#c9a27e"/></svg>
-      <span>תלתיקס<small>TLATIX · 3D</small></span>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="תלתיקס – לדף הבית">
+      <svg width="28" height="32" viewBox="-2 -2 44 50" stroke-linejoin="round" stroke-width="2.4" aria-hidden="true" focusable="false"><path d="M20 0 40 10.6 20 21.4 0 10.6Z" fill="#111111" stroke="#111111"/><path d="M0 15.4 20 26.2 40 15.4V23.8L20 34.6 0 23.8Z" fill="#7A4E2D" stroke="#7A4E2D"/><path d="M0 28.6 20 39.4 40 28.6V35.2L20 45.8 0 35.2Z" fill="#111111" stroke="#111111"/></svg>
+      <span>תלתיקס</span>
     </a>
-    <nav aria-label="ניווט ראשי">
-      <ul class="menu" id="menu">
-        <li><a href="#services">שירותים</a></li>
-        <li><a href="#process">איך זה עובד</a></li>
-        <li><a href="#team">הצוות</a></li>
-        <li><a href="#gallery">עבודות</a></li>
-        <li><a href="#contact">צור קשר</a></li>
-      </ul>
+    <nav class="main-nav" aria-label="ניווט ראשי">
+      <a href="#services">שירותים</a>
+      <a href="#designers">המעצבים</a>
+      <a href="#how">איך זה עובד</a>
+      <a class="nav-cta" href="#contact">צור קשר</a>
     </nav>
-    <a class="btn btn-dark" href="#contact">לקבלת הצעת מחיר</a>
-    <button class="burger" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="menu" id="burger"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main id="main">
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">הדפסת תלת-ממד</span>
-        <h1>מהרעיון שלכם<br>ל<em>חלק שמחזיקים ביד.</em></h1>
-        <p class="lead">תלתיקס היא צוות של מעצבים ואנשי הדפסה. אנחנו מדפיסים לפי העיצוב שלכם, ממדלים כשאין עדיין קובץ, ומייעצים לעסקים איזו מדפסת באמת מתאימה להם.</p>
-        <div class="hero-cta">
-          <a class="btn btn-brown" href="#contact">שלחו לנו קובץ או רעיון</a>
-          <a class="btn btn-line" href="#consult">ייעוץ לבחירת מדפסת</a>
-        </div>
-        <div class="facts">
-          <div><b>הדפסה לפי עיצוב</b><span>מקובץ מוכן או מסקיצה</span></div>
-          <div><b>ייעוץ לעסקים</b><span>לפני שקונים מדפסת</span></div>
-          <div><b>מעצבים בצוות</b><span>שמבינים מה אפשר להדפיס</span></div>
-        </div>
+<main id="main" tabindex="-1">
+
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <span class="pill">ייעוץ · עיצוב · הדפסה</span>
+      <h1 id="hero-title">מתמחים<br>בהדפסת תלת-ממד</h1>
+      <p class="lead">מייעצים לעסקים איך להכניס הדפסה לעבודה, ומדפיסים כל רעיון, מהסקיצה ועד המוצר המוגמר.</p>
+      <div class="btn-row">
+        <a class="btn btn-brown" href="#contact" data-service="ייעוץ לעסק">אני רוצה ייעוץ לעסק</a>
+        <a class="btn btn-outline" href="#contact" data-service="יש לי רעיון להדפסה">יש לי רעיון להדפסה</a>
       </div>
-      <div class="photo" role="img" aria-label="תמונה: מדפסת תלת-ממד בפעולה">
-        <!-- להחלפה: <img src="images/hero.jpg" alt="מדפסת תלת-ממד בפעולה"> -->
-        <span class="ph">תמונת המדפסת בפעולה</span>
-      </div>
+    </div>
+    <div class="photo">
+      <img src="img/hero-printer.jpg" alt="מדפסת תלת-ממד על שולחן עבודה בסטודיו" width="1100" height="1650" fetchpriority="high">
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">השירותים שלנו</span>
-        <h2>שני דברים, ועושים אותם טוב.</h2>
-        <p>בין אם אתם צריכים חלק אחד, סדרה קטנה, או מדפסת משלכם – נעזור לכם להגיע לתוצאה הנכונה.</p>
+  <section id="services" class="band" aria-labelledby="services-title">
+    <div class="wrap section">
+      <div class="section-head">
+        <h2 id="services-title">איך נוכל לעזור לכם</h2>
+        <p>שני מסלולים, צוות אחד שמכיר את התחום לעומק.</p>
       </div>
-      <div class="services">
-        <article class="svc" id="print">
-          <div class="photo light" role="img" aria-label="תמונה: חלקים מודפסים"><span class="ph">חלקים מודפסים מקרוב</span></div>
-          <div class="svc-body">
-            <h3>הדפסה לפי עיצוב</h3>
-            <p>שולחים לנו קובץ, תמונה או אפילו סקיצה על דף. אנחנו בודקים שהדגם מתאים להדפסה, מתאימים חומר וצבע, ומדפיסים.</p>
-            <ul class="ticks">
-              <li>קבצי STL, 3MF, OBJ ו-STEP</li>
-              <li>אין קובץ? המעצבים שלנו ימדלו בשבילכם</li>
-              <li>אב-טיפוס, חלקי חילוף, מתנות ופריטים ממותגים</li>
-              <li>יחידה בודדת או סדרה קטנה</li>
-            </ul>
-            <a class="btn btn-dark" href="#contact" data-service="הדפסה לפי עיצוב">שלחו קובץ להצעת מחיר</a>
-          </div>
+      <div class="cards">
+        <article class="card">
+          <span class="eyebrow">לעסקים</span>
+          <h3>ייעוץ להדפסת תלת-ממד בעסק</h3>
+          <p>רוצים להתחיל להדפיס בעסק? נבין מה אתם צריכים לייצר, נמליץ על המדפסת והחומרים שמתאימים לכם ונלווה אתכם עד שהכול עובד.</p>
+          <ul class="ticks">
+            <li>אבחון צרכים, כמויות ותקציב</li>
+            <li>בחירת מדפסת והשוואה בין חלופות</li>
+            <li>התקנה, כיול וליווי בהדפסות הראשונות</li>
+          </ul>
+          <a class="btn btn-brown btn-sm" href="#contact" data-service="ייעוץ לעסק">השאירו פרטים לייעוץ</a>
         </article>
-        <article class="svc" id="consult">
-          <div class="photo dark" role="img" aria-label="תמונה: ייעוץ לעסק"><span class="ph">ייעוץ בעסק של הלקוח</span></div>
-          <div class="svc-body">
-            <h3>ייעוץ לבחירת מדפסת לעסקים</h3>
-            <p>שוקלים להכניס מדפסת תלת-ממד לעסק? לפני שמשקיעים, נבין יחד מה אתם צריכים להדפיס ונמליץ על הפתרון שמתאים לכם – לא על הדגם הכי יקר.</p>
-            <ul class="ticks">
-              <li>אפיון השימוש: מה, כמה ובאיזו איכות</li>
-              <li>התאמת טכנולוגיה, חומרים ונפח הדפסה</li>
-              <li>תקציב, עלויות שוטפות ותחזוקה</li>
-              <li>ליווי בהתקנה והדרכה ראשונית</li>
-            </ul>
-            <a class="btn btn-dark" href="#contact" data-service="ייעוץ לבחירת מדפסת">תיאום שיחת ייעוץ</a>
-          </div>
+        <article class="card dark">
+          <span class="eyebrow">לכל אחד</span>
+          <h3>יש לכם רעיון? נדפיס אותו</h3>
+          <p>שולחים קובץ, תמונה או אפילו סקיצה על דף. אנחנו מעצבים, בודקים שהכול מוכן להדפסה ומדפיסים, מפריט אחד ועד סדרה.</p>
+          <ul class="ticks">
+            <li>הדפסה מקובץ מוכן <span dir="ltr">(STL, 3MF, STEP)</span></li>
+            <li>עיצוב מאפס מרעיון או סקיצה</li>
+            <li>מגוון חומרים וצבעים</li>
+          </ul>
+          <a class="btn btn-white btn-sm" href="#contact" data-service="יש לי רעיון להדפסה">ספרו לנו על הרעיון</a>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="process" id="process">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">איך זה עובד</span>
-        <h2>ארבעה צעדים, בלי הפתעות.</h2>
-        <p>מהפנייה הראשונה ועד שהחלק אצלכם – אתם יודעים בכל שלב מה קורה ומה המחיר.</p>
-      </div>
-      <div class="steps">
-        <div class="step"><h3>שולחים פנייה</h3><p>קובץ, תמונה או תיאור של מה שאתם צריכים – בטופס באתר או במייל.</p></div>
-        <div class="step"><h3>בודקים ומתמחרים</h3><p>מוודאים שהדגם מתאים להדפסה, ממליצים על חומר ושולחים הצעת מחיר.</p></div>
-        <div class="step"><h3>מעצבים ומדפיסים</h3><p>אם צריך – מתקנים או ממדלים. אחרי אישור שלכם, יוצאים להדפסה.</p></div>
-        <div class="step"><h3>מקבלים ביד</h3><p>גימור, בדיקת איכות ומסירה. צריך עוד עותקים? הקובץ כבר מוכן.</p></div>
-      </div>
+  <section id="designers" class="wrap team" aria-labelledby="team-title">
+    <div class="photo">
+      <img src="img/printhead.jpg" alt="ראש הדפסה של מדפסת תלת-ממד בזמן עבודה" width="1400" height="793" loading="lazy">
+    </div>
+    <div class="team-text">
+      <span class="eyebrow">הצוות</span>
+      <h2 id="team-title">מעצבים שמבינים<br>הדפסת תלת-ממד</h2>
+      <p>עיצוב שנראה טוב על המסך לא תמיד יוצא טוב מהמדפסת. המעצבים שלנו מכירים את התחום מבפנים, ומתאימים כל עיצוב כך שיצא חזק, מדויק ויפה כבר מההדפסה הראשונה.</p>
+      <ul class="tags" aria-label="שירותי עיצוב">
+        <li>עיצוב מאפס</li>
+        <li>שיפור קבצים קיימים</li>
+        <li>אבות-טיפוס לעסקים</li>
+      </ul>
     </div>
   </section>
 
-  <!-- TEAM -->
-  <section id="team">
-    <div class="wrap">
-      <div class="team-intro">
-        <div class="head">
-          <span class="eyebrow">הצוות</span>
-          <h2>מעצבים שמבינים בהדפסה.</h2>
-          <p>תלתיקס הוקמה על ידי חמישה שותפים. בין אם מדובר בעיצוב, בהנדסה או בהדפסה עצמה – יש אצלנו מי שמכיר את זה מקרוב.</p>
+  <section id="how" class="band" aria-labelledby="how-title">
+    <div class="wrap section">
+      <h2 id="how-title">איך זה עובד</h2>
+      <ol class="steps">
+        <li><span class="num" aria-hidden="true">1</span><h3>מדברים</h3><p>מספרים לנו מה אתם צריכים: ייעוץ לעסק או הדפסה של רעיון.</p></li>
+        <li><span class="num" aria-hidden="true">2</span><h3>מתכננים</h3><p>מקבלים המלצה מסודרת על ציוד, או הדמיה והצעת מחיר.</p></li>
+        <li><span class="num" aria-hidden="true">3</span><h3>מדפיסים</h3><p>מקימים איתכם את המדפסת, או מדפיסים ושולחים אליכם את המוצר.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap contact" aria-labelledby="contact-title">
+    <div class="contact-text">
+      <h2 id="contact-title">בואו נדבר</h2>
+      <p>השאירו פרטים ונחזור אליכם בהקדם.</p>
+      <p class="direct">טלפון: <a href="tel:[טלפון]" dir="ltr">[טלפון]</a><br>מייל: <a href="mailto:info@tlatix.co.il" dir="ltr">info@tlatix.co.il</a></p>
+    </div>
+    <form class="lead-form" id="lead-form" action="https://formsubmit.co/ajax/info@tlatix.co.il" method="POST" novalidate aria-describedby="form-notice">
+      <input type="hidden" name="_subject" value="פנייה חדשה מהאתר – תלתיקס">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <p class="notice">שדות המסומנים ב-<span aria-hidden="true">*</span><span class="sr-only">כוכבית</span> הם שדות חובה.</p>
+      <div class="row">
+        <div class="field">
+          <label for="f-name">שם מלא <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" type="text" name="name" autocomplete="name" required aria-required="true" aria-describedby="f-name-err">
+          <span class="err" id="f-name-err"></span>
         </div>
-        <blockquote>עיצוב טוב להדפסה מתחיל בהבנה של איך המדפסת בונה את החלק, שכבה אחרי שכבה.</blockquote>
-      </div>
-      <div class="team">
-        <div class="member"><div class="photo" role="img" aria-label="תמונה: עבודת עיצוב במחשב"><span class="ph">תמונה</span></div><h3>עיצוב ומידול</h3><p>הופכים רעיון או סקיצה לקובץ שמוכן להדפסה.</p></div>
-        <div class="member"><div class="photo light" role="img" aria-label="תמונה: מדידה של חלק"><span class="ph">תמונה</span></div><h3>הנדסה ודיוק</h3><p>חלקים שצריכים להתאים, להחזיק ולעבוד.</p></div>
-        <div class="member"><div class="photo dark" role="img" aria-label="תמונה: המדפסת"><span class="ph">תמונה</span></div><h3>הדפסה</h3><p>כיול, בחירת חומר והגדרות שמתאימות לכל דגם.</p></div>
-        <div class="member"><div class="photo" role="img" aria-label="תמונה: גימור של חלק"><span class="ph">תמונה</span></div><h3>גימור</h3><p>ניקוי תמיכות, בדיקת איכות ומסירה מסודרת.</p></div>
-        <div class="member"><div class="photo light" role="img" aria-label="תמונה: פגישת ייעוץ"><span class="ph">תמונה</span></div><h3>ייעוץ</h3><p>עוזרים לעסקים לבחור מדפסת ולהתחיל לעבוד איתה.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="gallery-sec" id="gallery">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">עבודות</span>
-        <h2>מה יצא לנו מהמדפסת.</h2>
-        <p>מבחר מהפרויקטים שלנו. רוצים לראות משהו ספציפי? כתבו לנו.</p>
-      </div>
-      <div class="gallery">
-        <div class="photo g1" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 1</span></div>
-        <div class="photo light" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 2</span></div>
-        <div class="photo dark" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 3</span></div>
-        <div class="photo light g4" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 4</span></div>
-        <div class="photo dark" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 5</span></div>
-        <div class="photo" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 6</span></div>
-        <div class="photo light" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 7</span></div>
-        <div class="photo dark" role="img" aria-label="עבודה מודפסת"><span class="ph">עבודה 8</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <span class="eyebrow">צור קשר</span>
-        <h2>ספרו לנו מה אתם צריכים.</h2>
-        <p style="color:var(--muted);font-size:18px">מלאו את הטופס ונחזור אליכם עם תשובה והצעת מחיר. יש לכם קובץ או תמונה? שלחו אותם למייל.</p>
-        <div class="channels">
-          <a class="channel" href="mailto:info@tlatix.co.il">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-            <div><b>אימייל</b><span>info@tlatix.co.il</span></div>
-          </a>
+        <div class="field">
+          <label for="f-phone">טלפון <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" required aria-required="true" pattern="[0-9+\-\s]{9,15}" aria-describedby="f-phone-err">
+          <span class="err" id="f-phone-err"></span>
         </div>
       </div>
-
-      <form action="https://formsubmit.co/info@tlatix.co.il" method="POST" id="contact-form">
-        <input type="hidden" name="_subject" value="פנייה חדשה מהאתר – תלתיקס">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://tlatix.co.il/thanks.html">
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field"><label for="f-name">שם מלא</label><input id="f-name" name="שם" required autocomplete="name"></div>
-        <div class="field"><label for="f-phone">טלפון</label><input id="f-phone" name="טלפון" type="tel" required autocomplete="tel" dir="ltr"></div>
-        <div class="field full"><label for="f-email">אימייל</label><input id="f-email" name="email" type="email" autocomplete="email" dir="ltr"></div>
-        <div class="field full"><label for="f-service">במה נוכל לעזור?</label>
-          <select id="f-service" name="שירות">
-            <option>הדפסה לפי עיצוב</option>
-            <option>ייעוץ לבחירת מדפסת</option>
-            <option>עיצוב ומידול</option>
-            <option>משהו אחר</option>
-          </select>
-        </div>
-        <div class="field full"><label for="f-msg">פרטים</label><textarea id="f-msg" name="הודעה" placeholder="מה תרצו להדפיס? גודל, כמות, צבע, דדליין..."></textarea></div>
-        <p class="form-note">יש קובץ או תמונה? אחרי שליחת הטופס אפשר לשלוח אותם למייל info@tlatix.co.il.</p>
-        <button class="btn btn-brown" type="submit">שליחה</button>
-      </form>
-    </div>
+      <div class="field">
+        <label for="f-service">במה נוכל לעזור?</label>
+        <select id="f-service" name="service">
+          <option>ייעוץ לעסק</option>
+          <option>יש לי רעיון להדפסה</option>
+          <option>יש לי קובץ מוכן</option>
+          <option>משהו אחר</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-notes">ספרו לנו קצת</label>
+        <textarea id="f-notes" name="notes" rows="4"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-company">לא למלא</label>
+        <input id="f-company" type="text" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="notice" id="form-notice">הפרטים שתשאירו ישמשו רק כדי לחזור אליכם בנוגע לפנייה. אינכם חייבים למסור אותם לפי חוק, אבל בלי שם וטלפון לא נוכל לחזור אליכם. פרטים נוספים ב<a href="privacy.html">מדיניות הפרטיות</a>.</p>
+      <button class="submit" type="submit">שליחה</button>
+      <p class="status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
   </section>
+
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <div class="foot">
-      <div>
-        <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="22" width="24" height="5" rx="1.5" fill="#fff"/><rect x="7" y="14.5" width="18" height="5" rx="1.5" fill="#c9a27e"/><rect x="10" y="7" width="12" height="5" rx="1.5" fill="#7a5230"/></svg><span>תלתיקס<small>TLATIX · 3D</small></span></a>
-        <p style="margin-top:14px;max-width:320px">הדפסת תלת-ממד לפי עיצוב וייעוץ לעסקים בבחירת מדפסת.</p>
-      </div>
-      <nav aria-label="ניווט תחתון">
-        <a href="#services">שירותים</a><a href="#process">איך זה עובד</a><a href="#team">הצוות</a><a href="#gallery">עבודות</a><a href="#contact">צור קשר</a>
-      </nav>
-      <div>
-        <a href="mailto:info@tlatix.co.il" dir="ltr">info@tlatix.co.il</a>
-      </div>
+    <div class="foot-col about">
+      <span class="foot-brand">תלתיקס</span>
+      <span>מתמחים בהדפסת תלת-ממד.<br>ייעוץ לעסקים, עיצוב והדפסה.</span>
     </div>
-    <div class="copy">© <span id="y">2026</span> תלתיקס. כל הזכויות שמורות.</div>
+    <div class="foot-col">
+      <span class="foot-title">צור קשר</span>
+      <span>טלפון: <a href="tel:[טלפון]" dir="ltr">[טלפון]</a></span>
+      <span>מייל: <a href="mailto:info@tlatix.co.il" dir="ltr">info@tlatix.co.il</a></span>
+      <span>אינסטגרם: <span dir="ltr">@tlatix</span></span>
+    </div>
+    <nav class="foot-col" aria-label="ניווט בתחתית העמוד">
+      <span class="foot-title">ניווט</span>
+      <a href="#services">שירותים</a>
+      <a href="#designers">המעצבים</a>
+      <a href="#how">איך זה עובד</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+    <nav class="foot-col" aria-label="מידע משפטי">
+      <span class="foot-title">מידע</span>
+      <a href="accessibility.html">הצהרת נגישות</a>
+      <a href="privacy.html">מדיניות פרטיות</a>
+    </nav>
+    <div class="foot-bottom">
+      <span>© 2026 [שם העסק] · עוסק מס' [מספר עוסק]</span>
+      <span dir="ltr">tlatix.co.il</span>
+    </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-  const burger = document.getElementById('burger'), menu = document.getElementById('menu');
-  burger.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
+(function () {
+  // כפתורי הפתיח ממלאים מראש את סוג הפנייה בטופס
+  var select = document.getElementById('f-service');
+  document.querySelectorAll('[data-service]').forEach(function (a) {
+    a.addEventListener('click', function () { select.value = a.getAttribute('data-service'); });
   });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    menu.classList.remove('open'); burger.setAttribute('aria-expanded', false);
-  }));
-  // preselect service from service-card buttons
-  document.querySelectorAll('[data-service]').forEach(b => b.addEventListener('click', () => {
-    document.getElementById('f-service').value = b.dataset.service;
-  }));
+
+  var form = document.getElementById('lead-form');
+  var status = document.getElementById('form-status');
+  var checks = [
+    { el: document.getElementById('f-name'), err: document.getElementById('f-name-err'),
+      msg: function (v) { return v.trim().length < 2 ? 'נא לכתוב שם מלא' : ''; } },
+    { el: document.getElementById('f-phone'), err: document.getElementById('f-phone-err'),
+      msg: function (v) { var d = v.replace(/\D/g, ''); return d.length < 9 || d.length > 12 ? 'נא לכתוב מספר טלפון תקין (9 עד 12 ספרות)' : ''; } }
+  ];
+
+  function validate() {
+    var first = null;
+    checks.forEach(function (c) {
+      var m = c.msg(c.el.value);
+      c.err.textContent = m;
+      c.el.setAttribute('aria-invalid', m ? 'true' : 'false');
+      if (m && !first) first = c.el;
+    });
+    return first;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.textContent = '';
+    status.className = 'status';
+    var bad = validate();
+    if (bad) { bad.focus(); return; }
+    var endpoint = form.getAttribute('action') || '';
+    if (!endpoint || endpoint.indexOf('YOUR_FORM_ID') > -1) {
+      status.className = 'status ok';
+      status.textContent = 'זו תצוגה מקדימה: באתר החי הפנייה תישלח אליכם למייל אחרי שמחברים את הטופס.';
+      return;
+    }
+    var btn = form.querySelector('.submit');
+    btn.disabled = true;
+    status.textContent = 'שולח…';
+    fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('send failed');
+        form.reset();
+        status.className = 'status ok';
+        status.textContent = 'תודה! קיבלנו את הפרטים ונחזור אליכם בהקדם.';
+      })
+      .catch(function () {
+        status.className = 'status bad';
+        status.textContent = 'השליחה לא הצליחה. אפשר לנסות שוב או להתקשר אלינו.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
+})();
 </script>
 </body>
 </html>
