@@ -213,7 +213,7 @@ h2{margin:0;font-size:46px;font-weight:800;letter-spacing:-0.025em;line-height:1
 .toolbar-sort[hidden]{display:none}
 
 /* צבע לכל קטגוריה */
-[data-cat="baby"]  {--cat:#C2185B;--cat-dark:#8E1145;--cat-tint:#FCE4EC;--cat-soft:#FEF5F8;--cat-deep:#3D0A1F}
+[data-cat="baby"]  {--cat:#DB2777;--cat-dark:#9D174D;--cat-tint:#FCE7F3;--cat-soft:#FDF2F8;--cat-deep:#500724}
 [data-cat="car"]   {--cat:#C62828;--cat-dark:#8E1C1C;--cat-tint:#FDECEA;--cat-soft:#FEF6F5;--cat-deep:#3B0C0C}
 [data-cat="home"]  {--cat:#6A1B9A;--cat-dark:#4A148C;--cat-tint:#F3E5F5;--cat-soft:#FAF4FB;--cat-deep:#2A0B3D}
 [data-cat="office"]{--cat:#1565C0;--cat-dark:#0D47A1;--cat-tint:#E3F2FD;--cat-soft:#F4F9FE;--cat-deep:#0A2547}
