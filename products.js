@@ -37,12 +37,12 @@ window.TLATIX_CATEGORIES = [
 
 window.TLATIX_PRODUCTS = [
   // ---- לבית ----
-  { id: "drawer-organizer", category: "home",   name: "מארגן מגירות מודולרי",  price: 49, desc: "תאים שנערמים ומשתלבים זה בזה, לסדר בכל מגירה.", img: "" },
-  { id: "wall-hook",        category: "home",   name: "וו קיר מינימליסטי",      price: 19, desc: "וו נקי לתלייה של מפתחות, תיקים ומעילים.", img: "" },
+  { id: "drawer-organizer", category: "home",   name: "מארגן מגירות מודולרי",  price: 49, desc: "תאים שנערמים ומשתלבים זה בזה, לסדר בכל מגירה. התמונה להמחשה.", img: "https://media.printables.com/media/prints/cb9b5799-a2fc-4d80-9f1e-d2b99ba67047/images/13146813_d1184651-aad3-4b86-8fe6-b1995dcb9643_52c7ffbc-fc03-45df-ba6e-138697e07685/create_an_ultra_realistic_product_202605162238.jpeg" },
+  { id: "wall-hook",        category: "home",   name: "וו קיר מינימליסטי",      price: 19, desc: "וו נקי לתלייה של מפתחות, תיקים ומעילים. התמונה להמחשה.", img: "https://media.printables.com/media/prints/c66fb8d6-42c1-4ceb-9599-7174d119326d/images/12291714_582971ce-f1b1-4542-89c2-57f05843609a_1944b022-3648-462e-b9bf-9da9240fbe2f/chatgpt-image-12-3-2026-15_07_53.png" },
 
   // ---- לאוטו ----
-  { id: "headrest-hook",    category: "car",    name: "וו למשענת הראש",         price: 25, desc: "נתלה על מוטות משענת הראש ומחזיק תיקים ושקיות.", img: "" },
+  { id: "headrest-hook",    category: "car",    name: "וו למשענת הראש",         price: 25, desc: "נתלה על מוטות משענת הראש ומחזיק תיקים ושקיות. התמונה להמחשה.", img: "https://media.printables.com/media/prints/99035/images/1001593_e5848fac-3e7c-4293-a9ab-ffb9c801e319/6a131f95-1709-4538-b2ba-a22c01760301.jpg" },
 
   // ---- לגינה ----
-  { id: "ribbed-planter",   category: "garden", name: "עציץ מצולע על רגליים",   price: 69, desc: "עציץ גלילי עם מרקם פסים ורגליים קצרות שמרימות אותו מהמשטח.", img: "" }
+  { id: "ribbed-planter",   category: "garden", name: "עציץ מצולע על רגליים",   price: 69, desc: "עציץ גלילי עם מרקם פסים ורגליים קצרות שמרימות אותו מהמשטח. התמונה להמחשה.", img: "https://media.printables.com/media/prints/a7392a3f-2bfb-4ff5-8550-754078adb27f/images/11007455_8187c1cb-45c9-4a8b-9109-a159ac738b7f_69bf32b2-8639-48d3-9215-e36857d13c88/img2.png" }
 ];
