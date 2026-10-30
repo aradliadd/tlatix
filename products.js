@@ -37,29 +37,12 @@ window.TLATIX_CATEGORIES = [
 
 window.TLATIX_PRODUCTS = [
   // ---- לבית ----
-  { id: "phone-stand",     category: "home",   name: "מעמד לטלפון ולטאבלט",      price: 39, desc: "מעמד יציב לשולחן או למטבח, בזווית נוחה לצפייה.", img: "", demo: true },
-  { id: "wall-hooks",      category: "home",   name: "ווי תלייה לקיר – סט 4",     price: 29, desc: "ווים נקיים בעיצוב מינימליסטי למפתחות, תיקים ומעילים.", img: "", demo: true },
-  { id: "key-bowl",        category: "home",   name: "קערה למפתחות",              price: 49, desc: "קערה גיאומטרית לכניסה לבית, לכל הדברים הקטנים.", img: "", demo: true },
-  { id: "spice-organizer", category: "home",   name: "מארגן תבלינים למגירה",      price: 59, desc: "מדרגות שמתאימות למגירה וחוסכות חיפושים.", img: "", demo: true },
-  { id: "plant-shelf",     category: "home",   name: "מדף קטן לקיר",              price: 69, desc: "מדף צף לעציץ קטן, תמונה או פריט עיצוב.", img: "", demo: true },
-
-  // ---- לתינוק ----
-  { id: "door-sign",       category: "baby",   name: "שלט שם לדלת החדר",          price: 79, desc: "שלט בעיצוב אישי עם שם התינוק.", img: "", demo: true },
-  { id: "closet-dividers", category: "baby",   name: "מחיצות מידות לארון",        price: 35, desc: "מפרידים בין מידות הבגדים על המוט בארון.", img: "", demo: true },
-  { id: "wipes-holder",    category: "baby",   name: "מחזיק מגבונים לשידה",       price: 45, desc: "מחזיק שנצמד לשידת ההחתלה, תמיד בהישג יד.", img: "", demo: true },
+  { id: "drawer-organizer", category: "home",   name: "מארגן מגירות מודולרי",  price: 49, desc: "תאים שנערמים ומשתלבים זה בזה, לסדר בכל מגירה.", img: "" },
+  { id: "wall-hook",        category: "home",   name: "וו קיר מינימליסטי",      price: 19, desc: "וו נקי לתלייה של מפתחות, תיקים ומעילים.", img: "" },
 
   // ---- לאוטו ----
-  { id: "vent-phone",      category: "car",    name: "מחזיק טלפון לפתח המיזוג",   price: 49, desc: "נאחז בפתח המיזוג ומחזיק את הטלפון ביציבות.", img: "", demo: true },
-  { id: "console-tray",    category: "car",    name: "מארגן לקונסולה",            price: 59, desc: "מגש שמסדר את הקונסולה המרכזית.", img: "", demo: true },
-  { id: "seat-hook",       category: "car",    name: "וו לתיק על המושב",          price: 25, desc: "תולים את התיק על משענת המושב במקום על הרצפה.", img: "", demo: true },
-
-  // ---- למשרד ----
-  { id: "cable-clips",     category: "office", name: "מארגן כבלים לשולחן",        price: 29, desc: "קליפסים שמחזיקים את הכבלים במקום.", img: "", demo: true },
-  { id: "laptop-stand",    category: "office", name: "מעמד למחשב נייד",           price: 89, desc: "מגביה את המסך לגובה העיניים.", img: "", demo: true },
-  { id: "headphone-stand", category: "office", name: "מעמד לאוזניות",             price: 59, desc: "מקום קבוע לאוזניות על השולחן.", img: "", demo: true },
+  { id: "headrest-hook",    category: "car",    name: "וו למשענת הראש",         price: 25, desc: "נתלה על מוטות משענת הראש ומחזיק תיקים ושקיות.", img: "" },
 
   // ---- לגינה ----
-  { id: "geo-planter",     category: "garden", name: "עציץ גיאומטרי",             price: 49, desc: "עציץ בעיצוב חד עם ניקוז בתחתית.", img: "", demo: true },
-  { id: "plant-labels",    category: "garden", name: "תוויות לצמחים – סט 10",     price: 25, desc: "תוויות לתקיעה באדמה, לכל צמח ותבלין.", img: "", demo: true },
-  { id: "hose-holder",     category: "garden", name: "מחזיק לצינור השקיה",        price: 45, desc: "מתלה לקיר שמשאיר את הצינור מסודר.", img: "", demo: true }
+  { id: "ribbed-planter",   category: "garden", name: "עציץ מצולע על רגליים",   price: 69, desc: "עציץ גלילי עם מרקם פסים ורגליים קצרות שמרימות אותו מהמשטח.", img: "" }
 ];
