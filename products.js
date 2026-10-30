@@ -40,9 +40,6 @@ window.TLATIX_PRODUCTS = [
   { id: "drawer-organizer", category: "home",   name: "מארגן מגירות מודולרי",  price: 49, desc: "תאים שנערמים ומשתלבים זה בזה, לסדר בכל מגירה. התמונה להמחשה.", img: "https://media.printables.com/media/prints/cb9b5799-a2fc-4d80-9f1e-d2b99ba67047/images/13146813_d1184651-aad3-4b86-8fe6-b1995dcb9643_52c7ffbc-fc03-45df-ba6e-138697e07685/create_an_ultra_realistic_product_202605162238.jpeg" },
   { id: "wall-hook",        category: "home",   name: "וו קיר מינימליסטי",      price: 19, desc: "וו נקי לתלייה של מפתחות, תיקים ומעילים. התמונה להמחשה.", img: "https://media.printables.com/media/prints/c66fb8d6-42c1-4ceb-9599-7174d119326d/images/12291714_582971ce-f1b1-4542-89c2-57f05843609a_1944b022-3648-462e-b9bf-9da9240fbe2f/chatgpt-image-12-3-2026-15_07_53.png" },
 
-  // ---- לילדים ----
-  { id: "bubble-letters",   category: "baby",   name: "אותיות בלון לקיר",       price: 15, desc: "אותיות תפוחות בסגנון בלון, A עד Z, לתלייה על הקיר בחדר הילדים. המחיר לאות. קישוט לקיר, לא צעצוע. התמונה להמחשה.", img: "https://media.printables.com/media/prints/c2d26dbd-856b-403b-a08d-7409cf0c6493/images/13777576_7f6680fc-4c58-44f8-aa1c-866b33a06ceb_9f9ce65d-d433-4a22-9822-ee60f7ea2801/whatsapp-image-2026-09-09-at-13615-pm-1.jpeg" },
-
   // ---- לאוטו ----
   { id: "headrest-hook",    category: "car",    name: "וו למשענת הראש",         price: 25, desc: "נתלה על מוטות משענת הראש ומחזיק תיקים ושקיות. התמונה להמחשה.", img: "https://media.printables.com/media/prints/99035/images/1001593_e5848fac-3e7c-4293-a9ab-ffb9c801e319/6a131f95-1709-4538-b2ba-a22c01760301.jpg" },
 
