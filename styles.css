@@ -213,11 +213,28 @@ h2{margin:0;font-size:46px;font-weight:800;letter-spacing:-0.025em;line-height:1
 .toolbar-sort[hidden]{display:none}
 
 /* צבע לכל קטגוריה */
-[data-cat="baby"]  {--cat:#C2185B;--cat-dark:#8E1145;--cat-tint:#FCE4EC}
-[data-cat="home"]  {--cat:#C62828;--cat-dark:#8E1C1C;--cat-tint:#FDECEA}
-[data-cat="garden"]{--cat:#2E7D32;--cat-dark:#1B5E20;--cat-tint:#E8F5E9}
-[data-cat="office"]{--cat:#1565C0;--cat-dark:#0D47A1;--cat-tint:#E3F2FD}
-[data-cat="car"]   {--cat:#6A1B9A;--cat-dark:#4A148C;--cat-tint:#F3E5F5}
+[data-cat="baby"]  {--cat:#C2185B;--cat-dark:#8E1145;--cat-tint:#FCE4EC;--cat-soft:#FEF5F8;--cat-deep:#3D0A1F}
+[data-cat="car"]   {--cat:#C62828;--cat-dark:#8E1C1C;--cat-tint:#FDECEA;--cat-soft:#FEF6F5;--cat-deep:#3B0C0C}
+[data-cat="home"]  {--cat:#6A1B9A;--cat-dark:#4A148C;--cat-tint:#F3E5F5;--cat-soft:#FAF4FB;--cat-deep:#2A0B3D}
+[data-cat="office"]{--cat:#1565C0;--cat-dark:#0D47A1;--cat-tint:#E3F2FD;--cat-soft:#F4F9FE;--cat-deep:#0A2547}
+[data-cat="garden"]{--cat:#2E7D32;--cat-dark:#1B5E20;--cat-tint:#E8F5E9;--cat-soft:#F4FAF4;--cat-deep:#0F2E12}
+
+/* הלוגו: השכבה האמצעית לוקחת את צבע המותג של העמוד */
+.logo-mid{fill:var(--brown);stroke:var(--brown)}
+
+/* עמוד קטגוריה: כל העמוד עובר לצבעי הקטגוריה */
+body[data-cat]{--brown:var(--cat);--brown-dark:var(--cat-dark);--sand:var(--cat-soft);--sand-2:var(--cat-tint);--tan:var(--cat-tint);--line:var(--cat-tint)}
+body[data-cat] .site-header{border-bottom:3px solid var(--cat)}
+body[data-cat] .main-nav a.nav-cta{background:var(--cat-deep)}
+body[data-cat] .main-nav a.nav-cta:hover{background:var(--cat)}
+body[data-cat] .main-nav a:not(.nav-cta):hover{color:var(--cat)}
+body[data-cat] .card.dark{background:var(--cat-deep)}
+body[data-cat] .site-footer{background:var(--cat-deep)}
+body[data-cat] .foot-bottom{border-top-color:rgba(255,255,255,.14)}
+body[data-cat] .badge{background:var(--cat-deep)}
+body[data-cat] .crumbs a{color:var(--cat-dark)}
+body[data-cat] .toolbar-sort select{border-color:var(--cat)}
+body[data-cat] .result-count{color:var(--cat-dark)}
 .cat-sec .btn-brown{background:var(--cat,var(--brown))}
 .cat-sec .btn-brown:hover{background:var(--cat-dark,var(--brown-dark))}
 .cat-sec .cat-head h2,.cat-hero h1{color:var(--cat-dark,var(--ink))}
