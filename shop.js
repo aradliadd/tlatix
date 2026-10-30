@@ -29,7 +29,7 @@
       ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy">'
       : icon(c ? c.icon : "", 64);
     return (
-      '<article class="product">' +
+      '<article class="product" data-cat="' + esc(p.category) + '">' +
         '<div class="product-img">' + media +
           (p.demo ? '<span class="badge">דוגמה</span>' : "") +
         "</div>" +

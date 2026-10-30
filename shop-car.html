@@ -32,7 +32,7 @@
 
 <main id="main" tabindex="-1">
 
-  <section class="wrap cat-hero" aria-labelledby="cat-title">
+  <section class="wrap cat-hero" data-cat="car" aria-labelledby="cat-title">
     <nav class="crumbs" aria-label="מיקום באתר">
       <ol>
         <li><a href="shop.html">החנות</a></li>
@@ -48,16 +48,16 @@
     </div>
     <nav class="cat-tabs" aria-label="קטגוריות בחנות">
       <ul>
-        <li><a href="shop-home.html">לבית</a></li>
-        <li><a href="shop-baby.html">לתינוק</a></li>
-        <li><a href="shop-car.html" aria-current="page">לאוטו</a></li>
-        <li><a href="shop-office.html">למשרד</a></li>
-        <li><a href="shop-garden.html">לגינה</a></li>
+        <li><a data-cat="home" href="shop-home.html">לבית</a></li>
+        <li><a data-cat="baby" href="shop-baby.html">לתינוק</a></li>
+        <li><a data-cat="car" href="shop-car.html" aria-current="page">לאוטו</a></li>
+        <li><a data-cat="office" href="shop-office.html">למשרד</a></li>
+        <li><a data-cat="garden" href="shop-garden.html">לגינה</a></li>
       </ul>
     </nav>
   </section>
 
-  <section class="band" aria-label="המוצרים">
+  <section class="band" data-cat="car" aria-label="המוצרים">
     <div class="wrap section">
       <div class="toolbar">
         <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
