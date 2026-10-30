@@ -21,9 +21,9 @@ window.TLATIX_CATEGORIES = [
   { id: "home",   name: "לבית",   page: "shop-home.html",
     desc: "מעמדים, מארגנים, ווים ופריטי עיצוב שמתאימים בדיוק למקום שלהם.",
     icon: '<path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/>' },
-  { id: "baby",   name: "לתינוק", page: "shop-baby.html",
-    desc: "פריטים שימושיים ומעוצבים לחדר של התינוק ולהורים.",
-    icon: '<path d="M9 3h6"/><path d="M10 3v3h4V3"/><rect x="7" y="6" width="10" height="15" rx="3"/><path d="M7 11h3M7 15h3"/>' },
+  { id: "baby",   name: "לילדים", page: "shop-baby.html",
+    desc: "פריטים שימושיים ומעוצבים לחדר של הילדים.",
+    icon: '<rect x="4" y="13" width="7" height="7" rx="1.2"/><rect x="13" y="13" width="7" height="7" rx="1.2"/><rect x="8.5" y="4" width="7" height="7" rx="1.2"/>' },
   { id: "car",    name: "לאוטו",  page: "shop-car.html",
     desc: "מחזיקים, מארגנים והפתרונות הקטנים שתמיד חסרים ברכב.",
     icon: '<path d="M4.5 14l1.4-4.3A2 2 0 0 1 7.8 8.3h8.4a2 2 0 0 1 1.9 1.4L19.5 14"/><rect x="3" y="14" width="18" height="4.5" rx="1.5"/><path d="M6.5 18.5v1.5M17.5 18.5v1.5"/>' },
@@ -39,6 +39,9 @@ window.TLATIX_PRODUCTS = [
   // ---- לבית ----
   { id: "drawer-organizer", category: "home",   name: "מארגן מגירות מודולרי",  price: 49, desc: "תאים שנערמים ומשתלבים זה בזה, לסדר בכל מגירה. התמונה להמחשה.", img: "https://media.printables.com/media/prints/cb9b5799-a2fc-4d80-9f1e-d2b99ba67047/images/13146813_d1184651-aad3-4b86-8fe6-b1995dcb9643_52c7ffbc-fc03-45df-ba6e-138697e07685/create_an_ultra_realistic_product_202605162238.jpeg" },
   { id: "wall-hook",        category: "home",   name: "וו קיר מינימליסטי",      price: 19, desc: "וו נקי לתלייה של מפתחות, תיקים ומעילים. התמונה להמחשה.", img: "https://media.printables.com/media/prints/c66fb8d6-42c1-4ceb-9599-7174d119326d/images/12291714_582971ce-f1b1-4542-89c2-57f05843609a_1944b022-3648-462e-b9bf-9da9240fbe2f/chatgpt-image-12-3-2026-15_07_53.png" },
+
+  // ---- לילדים ----
+  { id: "bubble-letters",   category: "baby",   name: "אותיות בלון לקיר",       price: 15, desc: "אותיות תפוחות בסגנון בלון, A עד Z, לתלייה על הקיר בחדר הילדים. המחיר לאות. קישוט לקיר, לא צעצוע. התמונה להמחשה.", img: "https://media.printables.com/media/prints/c2d26dbd-856b-403b-a08d-7409cf0c6493/images/13777576_7f6680fc-4c58-44f8-aa1c-866b33a06ceb_9f9ce65d-d433-4a22-9822-ee60f7ea2801/whatsapp-image-2026-09-09-at-13615-pm-1.jpeg" },
 
   // ---- לאוטו ----
   { id: "headrest-hook",    category: "car",    name: "וו למשענת הראש",         price: 25, desc: "נתלה על מוטות משענת הראש ומחזיק תיקים ושקיות. התמונה להמחשה.", img: "https://media.printables.com/media/prints/99035/images/1001593_e5848fac-3e7c-4293-a9ab-ffb9c801e319/6a131f95-1709-4538-b2ba-a22c01760301.jpg" },
