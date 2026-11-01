@@ -26,7 +26,7 @@
   function card(p) {
     var c = cat(p.category);
     var media = p.img
-      ? '<img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy">'
+      ? '<img src="' + esc(p.img) + '" alt="" loading="lazy">'
       : icon(c ? c.icon : "", 64);
     return (
       '<article class="product" data-cat="' + esc(p.category) + '">' +
@@ -34,7 +34,7 @@
           (p.demo ? '<span class="badge">דוגמה</span>' : "") +
         "</div>" +
         '<div class="product-body">' +
-          "<h3>" + esc(p.name) + "</h3>" +
+          '<h3><a class="product-link" href="product.html?id=' + encodeURIComponent(p.id) + '">' + esc(p.name) + "</a></h3>" +
           (p.desc ? "<p>" + esc(p.desc) + "</p>" : "") +
           '<div class="product-foot">' +
             '<span class="price"><span class="sr-only">מחיר: </span>₪' + esc(p.price) + "</span>" +
@@ -44,6 +44,8 @@
       "</article>"
     );
   }
+
+  window.TLATIX_CARD = card; // משמש גם את עמוד המוצר
 
   // עמוד החנות הראשי: תצוגה מקדימה של כל קטגוריה
   document.querySelectorAll("[data-preview]").forEach(function (box) {
