@@ -63,6 +63,17 @@
     el.textContent = n ? countLabel(n) : "בקרוב";
   });
 
+
+  // תמונות לכרטיסי הקטגוריות בעמוד הבית
+  document.querySelectorAll("[data-cat-img]").forEach(function (box) {
+    var id = box.getAttribute("data-cat-img");
+    var withImg = byCategory(id).filter(function (p) { return p.img; });
+    var c = cat(id);
+    box.innerHTML = withImg.length
+      ? '<img src="' + esc(withImg[0].img) + '" alt="" loading="lazy">'
+      : icon(c ? c.icon : "", 72);
+  });
+
   // עמוד קטגוריה: כל המוצרים + מיון
   var grid = document.querySelector("[data-category-grid]");
   if (grid) {
