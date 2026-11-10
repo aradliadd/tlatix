@@ -145,13 +145,6 @@ window.TLATIX_PRODUCTS = [
       "https://media.printables.com/media/prints/952228/images/7265077_7ba794ce-3271-497c-b80b-dbc580b687fe_71d7a917-b4b9-4aee-b612-dc072edb3a2b/thumbs/inside/1280x960/jpg/img_6233.webp",
       "https://media.printables.com/media/prints/952228/previews/thumbs/inside/1280x960/png/87cde64fabef42d1392d18ee0e439530c211a506.webp"
     ] },
-  { id: "helicopter-toy", category: "baby", name: "מסוק צעצוע", price: 79, desc: "מסוק צעצוע עם להבים מסתובבים. התמונה להמחשה.", img: "https://media.printables.com/media/prints/102668/images/1028759_c87b4183-7104-43fe-8425-0a3a3b8490e3/thumbs/inside/1280x960/webp/capture-decran-2017-05-15-a-101326.webp",
-    imgs: [
-      "https://media.printables.com/media/prints/102668/images/1028759_c87b4183-7104-43fe-8425-0a3a3b8490e3/thumbs/inside/1280x960/webp/capture-decran-2017-05-15-a-101326.webp",
-      "https://media.printables.com/media/prints/102668/stls/1028744_bce0c544-f086-4b56-88b1-6bd0b8b9a8b1/thumbs/inside/1280x960/png/1_helicopter_base_preview.webp",
-      "https://media.printables.com/media/prints/102668/stls/1028744_bce0c544-f086-4b56-88b1-6bd0b8b9a8b1/thumbs/inside/1280x960/png/2_helicopter_blades_preview.webp",
-      "https://media.printables.com/media/prints/102668/stls/1028744_bce0c544-f086-4b56-88b1-6bd0b8b9a8b1/thumbs/inside/1280x960/png/1_helicopter_front_preview.webp"
-    ] },
 
   // ---- לאוטו ----
   { id: "headrest-hook",    category: "car",    name: "וו למשענת הראש",         price: 49, desc: "נתלה על מוטות משענת הראש ומחזיק תיקים ושקיות. התמונה להמחשה.", img: "https://media.printables.com/media/prints/99035/images/1001593_e5848fac-3e7c-4293-a9ab-ffb9c801e319/6a131f95-1709-4538-b2ba-a22c01760301.jpg",
